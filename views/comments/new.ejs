@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+  <div class="container">
+  	
+  	<div class="row">
+  		<h1 style="text-align: center;">Add a New Comment to <%= sneaker.name %></h1>
+  		<div style="width: 30%; margin: 30px auto;">
+  			<form action="/sneakers/<%= sneaker._id %>/comments" method="POST">  				
+  				<div class="form-group">
+  					<input class="form-control" type="text" placeholder="text" name="comment[text]">
+  				</div>  				
+  				<div class="form-group">
+  					<button class="btn btn-lg btn-default btn-block btn-primary" >submit</button>
+  				</div>
+  			</form>
+  			<a href="/sneakers">Back to Sneakers</a>
+  		</div>
+  		
+  	</div>
+
+  </div>
+  
+<% include ../partials/footer %>  

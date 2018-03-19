@@ -1,0 +1,49 @@
+
+    <% include ../partials/header %>
+
+        
+
+        <div class="container">
+
+
+          <header class="jumbotron">
+            <div class="container">
+              <h1>SNEAKERS</h1>
+              <p>Check these out!</p>
+              <p>
+                <a class="btn btn-lg btn-primary" href="/sneakers/new">Add New Sneaker</a>
+              </p>
+            </div>
+          </header>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <h3>Our Most Popular Sneakers!</h3>
+            </div>
+
+          </div>
+
+          <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+            <% sneakers.forEach(function(s) { %>
+              <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                  <img src="<%= s.image %>" height="400" width="600">
+                  <div class="caption">
+                    <h4><%= s.name %></h4>
+                  </div>
+                  <p>
+                    <a href="/sneakers/<%= s._id %>" class="btn btn-primary">More Info</a>
+                  </p>
+                </div>
+                
+                
+              </div>
+            <% }); %>
+          </div>
+          
+          <a href="/">Back to Landing Page</a>
+
+        </div>
+
+
+    <% include ../partials/footer %>
